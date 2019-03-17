@@ -9,8 +9,9 @@
 ##### Images are stored in /var/www/images/
 ##### Add the following is the an addition to apache_conf for perl:
 <code>
-    PerlSwitches -w
-    PerlSwitches -T
+    
+    PerlSwitches w
+    PerlSwitches T
 
     Alias /perl /var/www/perl
     <Directory /var/www/perl>
