@@ -8,8 +8,7 @@
 ##### Place the content of this folder to /var/www/perl
 ##### Images are stored in /var/www/images/
 ##### Add the following is the an addition to apache_conf for perl:
-<code>
-
+`
     PerlSwitches -w
     PerlSwitches -T
 
@@ -33,7 +32,7 @@
         PerlResponseHandler Apache2::Status
         Require ip 127.0.0.1 10.0.0.0/24
     </Location>
-<code>
+`
 
 #### How to test:
 ##### images.cgi has many actions and display formats:
