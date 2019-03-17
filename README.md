@@ -33,25 +33,21 @@
     </Location>
 
 #### How to test:
+
 ##### images.cgi has many actions and display formats:
-
-- action=testupload -- a simple html form to browse and upload a file to server
-    * http://127.0.0.1/perl/images.cgi?action=testupload
-
-- action=upload -- There are 2 ways to upload a file, 1. by link, 2. by http post; I chose http post;  Please test white testupload action
-    * http://127.0.0.1/perl/images.cgi?action=upload&file=uploading_file_name
-
-- action=list -- list all image files in /var/www/images/
-    * http://127.0.0.1/perl/images.cgi?action=list&format=web
-    * http://127.0.0.1/perl/images.cgi?action=list&format=json
-
-##### action=metadata -- obtain image file's properties and display the information
-http://127.0.0.1/perl/images.cgi?action=metadata&file_name=images1.jpeg&format=web
-http://127.0.0.1/perl/images.cgi?action=metadata&file_name=images1.jpeg&format=json
-
-##### action=download -- download images in list service
-http://127.0.0.1/perl/images.cgi?action=download&file_name=images1.jpeg&format=web
-http://127.0.0.1/perl/images.cgi?action=download&file_name=images1.jpeg&format=json
+1.  action=testupload -- a simple html form to browse and upload a file to server
+    *  http://127.0.0.1/perl/images.cgi?action=testupload
+2.  action=upload -- There are 2 ways to upload a file, 1. by link, 2. by http post; I chose http post;  Please test white testupload action
+    *  http://127.0.0.1/perl/images.cgi?action=upload&file=uploading_file_name
+3.  action=list -- list all image files in /var/www/images/
+    *  http://127.0.0.1/perl/images.cgi?action=list&format=web
+    *  http://127.0.0.1/perl/images.cgi?action=list&format=json
+4.  action=metadata -- obtain image file's properties and display the information
+    *  http://127.0.0.1/perl/images.cgi?action=metadata&file_name=images1.jpeg&format=web
+    *  http://127.0.0.1/perl/images.cgi?action=metadata&file_name=images1.jpeg&format=json
+5.  action=download -- download images in list service
+    *  http://127.0.0.1/perl/images.cgi?action=download&file_name=images1.jpeg&format=web
+    *  http://127.0.0.1/perl/images.cgi?action=download&file_name=images1.jpeg&format=json
 
 
 
