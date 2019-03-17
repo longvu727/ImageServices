@@ -2,7 +2,7 @@
 1.  Using http, apache2, perl, and perl-cgi to drive the server-client component
 2.  Unit test in Services/Tests folder.  This is an easiest way to understand the Image Services.  See section 2 for the detail
 
-*Note:  Images are stored in /var/www/images/, if images directory isn't available Services::Image will automatically create one.  Please make a change to Services::Conf $IMAGE_PATH for a different image directory*
+##### *Note:  Images are stored in /var/www/images/, if images directory isn't available Services::Image will automatically create one.  Please make a change to Services::Conf $IMAGE_PATH for a different image directory*
 
 
 
