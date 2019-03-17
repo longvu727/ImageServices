@@ -6,14 +6,15 @@ use Data::Dumper;
 use Image::ExifTool;
 
 use Services::Response;
+use Services::Conf;
 
 
 sub new {
     my( $class, $args ) = @_;
 
     my $self = {
-        image_path => '/var/www/images/',
-        host       => $args->{host} || '/var/www/images'
+        image_path => $Services::Conf::IMAGE_PATH,
+        host       => $args->{host} || $Services::Conf::DEFAULT_HOST
     };
 
     unless (-d $self->{image_path} ) {
