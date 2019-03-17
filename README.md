@@ -3,11 +3,11 @@
 2.  Unit test in Services/Tests folder.  This is an easiest way to understand the Image Services.  See section 2 for the detail
 
 
-### Using http, apache2, perl, and perl-cgi to drive the server-client component
 
-##### Place the content of this folder to /var/www/perl
-##### Images are stored in /var/www/images/
-##### Add the following is the an addition to apache_conf for perl:
+### Using http, apache2, perl, and perl-cgi to drive the server-client component
+1.  Place the content of this folder to /var/www/perl
+2.  Images are stored in /var/www/images/
+3.  Add the following is the an addition to apache_conf for perl:
     PerlSwitches -w
     PerlSwitches -T
 
