@@ -7,30 +7,30 @@
 ### Using http, apache2, perl, and perl-cgi to drive the server-client component
 1.  Place the content of this folder to /var/www/perl
 2.  Images are stored in /var/www/images/
-3.  Add the following is the an addition to apache_conf for perl:
-    PerlSwitches -w
-    PerlSwitches -T
+3.  Add the following is the an addition to apache_conf for perl
+        PerlSwitches -w
+        PerlSwitches -T
 
-    Alias /perl /var/www/perl
-    <Directory /var/www/perl>
-        AddHandler perl-script .cgi .pl
-        PerlResponseHandler ModPerl::PerlRun
-        PerlOptions +ParseHeaders
-        Options +ExecCGI
-    </Directory>
+        Alias /perl /var/www/perl
+        <Directory /var/www/perl>
+            AddHandler perl-script .cgi .pl
+            PerlResponseHandler ModPerl::PerlRun
+            PerlOptions +ParseHeaders
+            Options +ExecCGI
+        </Directory>
 
-    Alias /images /var/www/images
-    <Directory /var/www/images>
-            Options Indexes FollowSymLinks
-            AllowOverride None
-            Require all granted
-    </Directory>
+        Alias /images /var/www/images
+        <Directory /var/www/images>
+                Options Indexes FollowSymLinks
+                AllowOverride None
+                Require all granted
+        </Directory>
 
-    <Location /perl-status>
-        SetHandler perl-script
-        PerlResponseHandler Apache2::Status
-        Require ip 127.0.0.1 10.0.0.0/24
-    </Location>
+        <Location /perl-status>
+            SetHandler perl-script
+            PerlResponseHandler Apache2::Status
+            Require ip 127.0.0.1 10.0.0.0/24
+        </Location>
 
 #### How to test:
 
