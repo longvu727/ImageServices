@@ -9,6 +9,7 @@
 ##### Images are stored in /var/www/images/
 ##### Add the following is the an addition to apache_conf for perl:
 `
+
     PerlSwitches -w
     PerlSwitches -T
 
@@ -61,7 +62,7 @@ http://127.0.0.1/perl/images.cgi?action=download&file_name=images1.jpeg&format=j
 Services/Tests/ImageTest.pl has 1x1 pixel png image stored as binary data at the end of the file.  By using this data, an image can be uploaded, downloaded, listed, and extracted information( metadata ).
 
 ##### Sample Test
-<code>
+`
 
     prove Services/Tests/ImageTest.pl 
 
@@ -97,4 +98,4 @@ Services/Tests/ImageTest.pl has 1x1 pixel png image stored as binary data at the
         #                      'Palette' => '255 77 0',
         #                      'ExifToolVersion' => '11.30'
 
-<code>
+`
