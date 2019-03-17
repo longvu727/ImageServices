@@ -8,8 +8,6 @@
 ##### Place the content of this folder to /var/www/perl
 ##### Images are stored in /var/www/images/
 ##### Add the following is the an addition to apache_conf for perl:
-`
-
     PerlSwitches -w
     PerlSwitches -T
 
@@ -33,13 +31,12 @@
         PerlResponseHandler Apache2::Status
         Require ip 127.0.0.1 10.0.0.0/24
     </Location>
-`
 
 #### How to test:
 ##### images.cgi has many actions and display formats:
 
-##### action=testupload -- a simple html form to browse and upload a file to server
-http://127.0.0.1/perl/images.cgi?action=testupload
+1. action=testupload -- a simple html form to browse and upload a file to server
+* http://127.0.0.1/perl/images.cgi?action=testupload
 
 ##### action=upload -- There are 2 ways to upload a file, 1. by link, 2. by http post; I chose http post;  Please test white testupload action
 http://127.0.0.1/perl/images.cgi?action=upload&file=uploading_file_name
@@ -62,8 +59,6 @@ http://127.0.0.1/perl/images.cgi?action=download&file_name=images1.jpeg&format=j
 Services/Tests/ImageTest.pl has 1x1 pixel png image stored as binary data at the end of the file.  By using this data, an image can be uploaded, downloaded, listed, and extracted information( metadata ).
 
 ##### Sample Test
-`
-
     prove Services/Tests/ImageTest.pl 
 
     Services/Tests/ImageTest.pl .. 1/4     # $list_result = [
@@ -97,5 +92,3 @@ Services/Tests/ImageTest.pl has 1x1 pixel png image stored as binary data at the
         #                      'Warning' => '[minor] Trailer data after PNG IEND chunk',
         #                      'Palette' => '255 77 0',
         #                      'ExifToolVersion' => '11.30'
-
-`
