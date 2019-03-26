@@ -39,7 +39,7 @@
 ##### images.cgi has many actions and display formats:
 1.  action=testupload -- a simple html form to browse and upload a file to server
     *  http://127.0.0.1/perl/images.cgi?action=testupload
-2.  action=upload -- There are 2 ways to upload a file, 1. by link, 2. by http post; I chose http post;  Please test white testupload action
+2.  action=upload -- There are 2 ways to upload a file, 1. by link, 2. by http post; I chose http post;  Please test with testupload action
     *  http://127.0.0.1/perl/images.cgi?action=upload&file=uploading_file_name
 3.  action=list -- list all image files in /var/www/images/
     *  http://127.0.0.1/perl/images.cgi?action=list&format=web
